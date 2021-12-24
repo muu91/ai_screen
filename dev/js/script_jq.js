@@ -22,16 +22,21 @@ $(document).ready(function () {
     $('.header__mobile').removeClass('active');
     $('body').removeClass('lock');
   });
-
-  // $('.header__menu_desktop .menu_desktop__content a').click(function (e) {
-  //   e.preventDefault();
-  //   $('.burger_btn').removeClass('active');
-  //   $('.header__menu_desktop').removeClass('active');
-  //   $('body').removeClass('lock');
-  // });
   // END BURGER DESKTOP
   // --------------------
   // --------------------
+  // MENU MOBILE
+  $('.btn_submenu').click(function (e) {
+    e.preventDefault();
+    $('.btn_submenu').removeClass('active');
+    $(this).addClass('active');
+    $('.btn_submenu').next().slideUp();
+    $(this).next().slideDown();
+  });
+  // END MENU MOBILE
+  // --------------------
+  // --------------------
+
   // REMOVE CLASS ВНЕ БЛОКА
   // $(document).mouseup(function (e) {
   //   var div = $(".header__menu_more > ul ");
